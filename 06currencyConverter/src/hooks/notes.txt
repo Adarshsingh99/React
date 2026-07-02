@@ -1,0 +1,45 @@
+ kya ham bhi custom hooks bana sakte hai ?
+custom hooks , in majority case is always return pure js and 
+its good practice if you are return js then put js and if you are return jsx put jsx.
+
+you its very complex.. but its not
+ 
+ 1. kis tarah se custom hooks desing krte haii
+This function return some data 
+function useCurrencyInfo(currency)
+{ 
+     // api call krana chahta hu automatically api call hone k liye aur usme directly kam krne k liye
+     useEffect() ka use  krunga
+     iske anadar ek function/callback aur ek dependecy array hota hai
+     1. function me api fetch karunga
+       normally api string me return hoti hai to usko json me change krna padta hai
+       .then((res)=> res.json) // data json me response aaya hai
+       .then((res)=> setData(res[currency]))
+
+       2. [currency]
+
+        export default useCurrencyInfo pura ka pura method hi return kr dete hai
+}
+
+useEffect(()=>{ fetch(``)
+     .then((res)=>res.json())
+     .then((res)=> setData(res[currency]))
+     console.log(data)
+
+     explanation
+
+useEffect(() => {
+
+1  Jab component mount hoga ya currency change hogi tab ye function chalega.
+
+Socho React bol raha hai:
+
+"Currency change hui? Chalo API se naya data le aate hain."
+
+2  fetch() server ko request bhejta hai. 
+
+3..  .then((res) => res.json())
+
+Jab server response bhej deta hai tab pehla .then() chalta hai.
+
+Yahan res server ka response object hai.

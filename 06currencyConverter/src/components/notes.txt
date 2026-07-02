@@ -1,0 +1,9 @@
+                {currencyOption.map((Currency)=>(
+                    <option value="usd">
+                            usd
+                        </option>
+                ))}
+
+                loops k andar index ka dyan rakhte hai
+
+                useId :- 
